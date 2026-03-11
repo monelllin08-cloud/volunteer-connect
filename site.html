@@ -1,0 +1,220 @@
+<!DOCTYPE html>  
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Volunteer Connect</title>
+    <link rel="stylesheet" href="csscode.css" />
+</head>
+
+<body>
+    <!-- Верхняя навигационная панель -->
+    <header class="top-navbar">
+        <div class="navbar-container" style="display:flex; justify-content:space-between; align-items:center; padding: 0 20px;">
+            <div class="logo" style="display:flex; align-items:center; font-weight:bold; font-size:1.2rem;">
+                <span>Volunteer Connect</span>
+            </div>
+            <nav class="navbar-menu" style="display:flex; gap:20px;">
+                <a href="#hero" style="text-decoration:none; color:black;">Дом</a>
+                <a href="#volunteer-opportunities" style="text-decoration:none; color:black;">Прими участие</a>
+                <a href="#footer" style="text-decoration:none; color:black;">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content" style="margin-top: 70px;">
+        <div class="left">
+            <nav class="left-navigation">
+                <ul class="left-navigation__list">
+                    <li class="left-navigation-item"><a href="#" onclick="openProfile()">Мой профиль</a></li>
+                    <li class="left-navigation-item"><a href="#" onclick="openEvents()">Предстоящие события</a></li>
+                    <li class="left-navigation-item"><a href="#" onclick="openHours()">Часы записи</a></li>
+                    <li class="left-navigation-item"><a href="#" onclick="openCart()">Корзина 🛒 <span id="cartCount">(0)</span></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="right">
+            <!-- HERO -->
+            <section id="hero" class="hero">
+                <h1>Присоединяйся к нам<br />и внеси свой вклад!</h1>
+                <p>Стань волонтером сегодня и помоги изменить жизни людей.</p>
+                <div class="hero-buttons">
+                    <a href="#volunteer-opportunities"><button class="btn-outline">Узнать больше</button></a>
+                    <button class="btn-dark" onclick="openProfile()">Зарегистрироваться</button>
+                </div>
+            </section>
+
+            <!-- ВОЗМОЖНОСТИ -->
+            <section id="volunteer-opportunities" class="section">
+                <h2>Возможности волонтеров</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Уборка</h3>
+                        <a href="./site (2).html">
+                            <img src=".//Новая папка/uborka.jpg" width="180" height="100" alt="Уборка" />
+                        </a>
+                        <p>Очистка и восстановление общественных территорий.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Фуд-драйв</h3>
+                        <a href="./site (2).html">
+                            <img src="./Новая папка/food.jpg" width="180" height="100" alt="Фуд-драйв" />
+                        </a>
+                        <p>Раздача продуктов нуждающимся.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Наставничество</h3>
+                        <a href="./site (2).html">
+                            <img src="./Новая папка/nastavnik.jpg" width="180" height="100" alt="Наставничество" />
+                        </a>
+                        <p>Помощь детям в обучении.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- МАГАЗИН -->
+            <section class="section">
+                <h2>Волонтерское снаряжение</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Футболка</h3>
+                        <img src="./Новая папка/futbolka.jpg" width="200" height="200" alt="Футболка" />
+                        <p>100 mdl</p>
+                        <button onclick="addToCart(100, 'Футболка')">Добавить</button>
+                    </div>
+                    <div class="card">
+                        <h3>Снаряжение</h3>
+                        <img src="./Новая папка/snar.jpg" width="200" height="200" alt="Снаряжение" />
+                        <p>200 mdl</p>
+                        <button onclick="addToCart(200, 'Снаряжение')">Добавить</button>
+                    </div>
+                </div>
+                <div class="cart">
+                    🛒 Корзина: <span id="cartTotal">0</span> mdl
+                </div>
+            </section>
+
+            <!-- НОВОСТИ -->
+            <section class="section" id="news">
+                <h2>Последние новости</h2>
+                <div class="cards">
+                    <div class="card">
+                        <a href="https://esp.md/ru/kaleydoskop/2025/10/21/belchan-priglashayut-na-subbotnik-i-posadku-derevev-gde-i-kogda" target="_blank" rel="noopener noreferrer">
+                            <img src="./Новая папка/uborka2.jpg" width="180" height="130" alt="Новости 1" />
+                        </a>
+                        <p>Мы привели парк в порядок и помогли экологии!</p>
+                    </div>
+                    <div class="card">
+                        <a href="https://communityfoodshare.org/ru/volunteer/" target="_blank" rel="noopener noreferrer">
+                            <img src="./Новая папка/food2.jpg" width="180" height="130" alt="Новости 2" />
+                        </a>
+                        <p>Было собрано более 500 кг продуктов для нуждающихся.</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer id="footer" class="footer">
+                <div class="footer-container">
+                    <div class="footer-block">
+                        <h3>Volunteer Connect</h3>
+                        <p>Помогаем нуждающимся людям с 2020 года</p>
+                    </div>
+                    <div class="footer-block">
+                        <h3>Контакты</h3>
+                        <p>📞 +373 62 118 888</p>
+                        <p>✉️ info@volunteerconnect</p>
+                        <p>📍 Бельцы, ул. Дечебал 143</p>
+                    </div>
+                    <div class="footer-block">
+                        <h3>Режим работы</h3>
+                        <p>Пн-Пт: 10:00 - 19:00</p>
+                        <p>Сб-Вс: 10:00 - 17:00</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2026 Волонтерство. Все права защищены.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- МОДАЛЬНОЕ ОКНО ПРОФИЛЯ -->
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <h3 id="profileTitle">Регистрация / Профиль</h3>
+
+            <input type="text" id="firstName" placeholder="Имя" />
+            <input type="text" id="lastName" placeholder="Фамилия" />
+            <input type="email" id="email" placeholder="Email" />
+
+            <button onclick="saveProfile()">Сохранить</button>
+            <button onclick="logoutUser()">Выйти</button>
+            <button class="close-btn" onclick="closeProfile()">Закрыть</button>
+
+            <p id="profileMessage"></p>
+        </div>
+    </div>
+
+    <!-- МОДАЛЬНОЕ ОКНО СОБЫТИЙ -->
+    <div id="eventsModal" class="modal">
+        <div class="modal-content">
+            <h3>Предстоящие события</h3>
+
+            <p>🌳 Посадка деревьев — 15 июня</p>
+            <p>🍎 Фуд-драйв — 20 июня</p>
+            <p>📚 Помощь детям — 25 июня</p>
+
+            <button class="close-btn" onclick="closeEvents()">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- МОДАЛЬНОЕ ОКНО ЧАСОВ -->
+    <div id="hoursModal" class="modal">
+        <div class="modal-content">
+            <h3>Часы работы</h3>
+
+            <p>Пн–Пт: 10:00 – 19:00</p>
+            <p>Сб–Вс: 10:00 – 17:00</p>
+
+            <h3>Часы записи</h3>
+
+            <p>Пн–Пт: 11:00 – 18:00</p>
+            <p>Сб: 11:00 – 16:00</p>
+
+            <button class="close-btn" onclick="closeHours()">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- МОДАЛЬНОЕ ОКНО КОРЗИНЫ -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <h3>Ваша корзина</h3>
+            <div id="cartItems"></div>
+            <p>Итог: <span id="cartTotalSum">0</span> mdl</p>
+            <button onclick="clearCart()">Очистить корзину</button>
+            <button onclick="openOrder()">Заказать</button>
+            <button class="close-btn" onclick="closeCart()">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- МОДАЛЬНОЕ ОКНО ЗАКАЗА -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <h3>Оформить заказ</h3>
+            <input type="text" id="orderName" placeholder="Имя" required />
+            <input type="text" id="orderSurname" placeholder="Фамилия" required />
+            <input type="email" id="orderEmail" placeholder="Email" required />
+            <input type="tel" id="orderPhone" placeholder="Телефон" required />
+            <input type="text" id="orderAddress" placeholder="Адрес доставки" required />
+            <button onclick="submitOrder()">Отправить заказ</button>
+            <button class="close-btn" onclick="closeOrder()">Закрыть</button>
+            <p id="orderMessage"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

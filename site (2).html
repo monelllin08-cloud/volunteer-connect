@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Форма заявки</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 50%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1e4fd8;
+}
+</style>
+
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Стать волонтёром</h2>
+
+    <form>
+        <label>Полное имя</label>
+        <input type="text" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Телефон</label>
+        <input type="tel" required>
+
+        <label>Возраст</label>
+        <input type="number" min="10" max="100" required>
+
+        <label>Выберите направление</label>
+        <select>
+            <option>Уборка</option>
+            <option>Фуд-драйв</option>
+            <option>Стань наставником</option>
+        </select>
+
+        <label>Почему хотите участвовать?</label>
+        <textarea rows="4"></textarea>
+
+        <button type="submit">Отправить заявку</button>
+    </form>
+</div>
+
+</body>
+</html>
